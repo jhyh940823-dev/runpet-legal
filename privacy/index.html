@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RunPet 개인정보처리방침</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --text: #1a1a1a;
+      --muted: #555;
+      --border: #ddd;
+      --bg: #fff;
+      --note-bg: #f7f7f7;
+      --link: #0b57d0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
+    }
+    h1 {
+      font-size: 1.6rem;
+      line-height: 1.3;
+      margin: 0 0 12px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 2rem 0 0.75rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--border);
+    }
+    h3 {
+      font-size: 1rem;
+      margin: 1.25rem 0 0.5rem;
+    }
+    p, li { font-size: 0.95rem; }
+    .meta, .disclaimer {
+      background: var(--note-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .disclaimer { color: var(--muted); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #fafafa; width: 28%; }
+    ul { padding-left: 1.2rem; }
+    a { color: var(--link); word-break: break-all; }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    @media (max-width: 600px) {
+      main { padding: 16px 14px 40px; }
+      h1 { font-size: 1.35rem; }
+      th { width: 36%; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>RunPet 개인정보처리방침</h1>
+
+    <p class="disclaimer"><strong>법률 자문이 아닌 앱 스토어 제출용 문서입니다.</strong> 최종 게시 및 스토어 제출 전 운영자 정보 기입과 필요 시 법률 전문가 검토가 필요합니다.</p>
+
+    <div class="meta">
+      <table>
+        <tr><th>버전</th><td>1.1 (출시 준비 최종안)</td></tr>
+        <tr><th>시행일</th><td>[확인 필요 — 공개 URL 게시일]</td></tr>
+        <tr><th>최종 수정일</th><td>2026-06-08</td></tr>
+      </table>
+    </div>
+
+    <h2>1. 개요</h2>
+    <p>Run Pet(「런 펫」, 이하 「앱」)은 실외·실내 러닝 기록, 펫 성장, 컬렉션, 챌린지 등 게임형 러닝 기능을 제공하는 모바일 애플리케이션입니다.</p>
+    <p>본 방침은 앱이 <strong>어떤 정보를 어떻게 이용·보관하는지</strong> 설명합니다. MVP(1.0.0) 기준 <strong>별도의 Run Pet 계정 로그인이나 Run Pet 운영 서버 동기화는 제공하지 않습니다.</strong> 주요 데이터는 <strong>사용자 기기 내</strong>에 저장됩니다.</p>
+    <table>
+      <tr><th>서비스명</th><td>Run Pet</td></tr>
+      <tr><th>개발자/운영자</th><td>[확인 필요 — 사업자명 또는 개발자명]</td></tr>
+      <tr><th>주소</th><td>[확인 필요]</td></tr>
+      <tr><th>문의 이메일</th><td>[확인 필요 — 대표님/운영 이메일]</td></tr>
+    </table>
+
+    <h3>1.1 의료·건강 관련 안내</h3>
+    <p>Run Pet은 <strong>운동 기록 및 게임형 동기 부여</strong>를 위한 앱이며, <strong>의료 진단, 치료, 질병 예방 목적의 서비스가 아닙니다.</strong> 앱에 표시되는 거리·페이스·칼로리 추정치·걸음 수 등은 참고용이며, 건강 상태 판단이나 의료 행위를 대체하지 않습니다.</p>
+
+    <h2>2. 수집·이용하는 정보</h2>
+    <p>아래 「수집」은 <strong>앱 기능 제공을 위해 기기에서 처리·저장되는 정보</strong>를 의미합니다. Run Pet MVP는 <strong>운영 서버로 사용자 데이터를 업로드·동기화하지 않습니다.</strong></p>
+
+    <h3>2.1 위치 정보 (정확한 위치)</h3>
+    <table>
+      <tr><th>수집 시점</th><td>사용자가 <strong>실외 러닝</strong>을 시작하고 위치 권한을 허용한 경우</td></tr>
+      <tr><th>내용</th><td>GPS 좌표, 이동 경로, 거리·페이스 계산에 필요한 위치 샘플</td></tr>
+      <tr><th>목적</th><td>실외 러닝 세션의 거리·경로·페이스 기록 및 지도 표시</td></tr>
+      <tr><th>보관</th><td>기기 내 로컬 데이터베이스(Drift) 및 관련 캐시(경로, 지도 스냅샷 등)</td></tr>
+      <tr><th>서버 전송</th><td>Run Pet 운영 서버로 <strong>전송하지 않음</strong></td></tr>
+    </table>
+
+    <h3>2.2 백그라운드 위치</h3>
+    <table>
+      <tr><th>수집 시점</th><td><strong>활성 실외 러닝 세션</strong> 중 화면을 끄거나 다른 앱을 사용하는 동안</td></tr>
+      <tr><th>목적</th><td>러닝이 끝날 때까지 거리·경로 기록을 이어감</td></tr>
+      <tr><th>중지</th><td>사용자가 러닝을 종료·저장하거나 세션을 취소하면 백그라운드 위치 추적을 중지</td></tr>
+      <tr><th>Android</th><td>포그라운드 서비스(<code>FOREGROUND_SERVICE_LOCATION</code>) 알림을 통해 백그라운드 기록이 진행될 수 있음</td></tr>
+      <tr><th>iOS</th><td><code>UIBackgroundModes</code>의 <code>location</code> — 활성 실외 러닝 중에만 사용</td></tr>
+    </table>
+
+    <h3>2.3 운동·활동(모션) 데이터</h3>
+    <table>
+      <tr><th>수집 시점</th><td>실내 러닝 또는 기록 탭 만보기 등 기능 사용 시 (권한 허용 시)</td></tr>
+      <tr><th>내용</th><td>걸음 수, 활동 인식 기반 데이터</td></tr>
+      <tr><th>목적</th><td>실내 러닝 기록, 오늘 걸음 수 표시</td></tr>
+      <tr><th>보관</th><td>기기 내</td></tr>
+    </table>
+
+    <h3>2.4 러닝 기록</h3>
+    <p><strong>내용:</strong> 거리, 시간, 페이스, 실내/실외 구분, 경로 좌표, 달력 기록, 목표 달성 정보 등<br>
+    <strong>목적:</strong> 운동 기록 저장·조회, 펫 성장·퀘스트·챌린지 진행<br>
+    <strong>보관:</strong> 기기 내</p>
+
+    <h3>2.5 사진·이미지</h3>
+    <table>
+      <tr><th>수집 시점</th><td>사용자가 <strong>직접 선택</strong>하여 특정 날짜의 러닝 기록에 사진을 첨부할 때</td></tr>
+      <tr><th>내용</th><td>사용자가 선택한 이미지 파일</td></tr>
+      <tr><th>목적</th><td>기록 탭/달력에서 해당 날짜 기록 시각화</td></tr>
+      <tr><th>서버 전송</th><td>MVP 기준 <strong>Run Pet 서버로 업로드하지 않음</strong> — 기기 내 저장</td></tr>
+    </table>
+
+    <h3>2.6 펫·게임 데이터</h3>
+    <p><strong>내용 (예시):</strong> 펫·알 상태, 컬렉션(도감), 챌린지 진행, 도전권·재화, 배지, 일일/주간 퀘스트 진행<br>
+    <strong>목적:</strong> 앱 게임 기능 제공<br>
+    <strong>보관:</strong> 기기 내 Drift/SQLite</p>
+
+    <h3>2.7 앱 설정 (기기 내)</h3>
+    <p><strong>내용 (예시):</strong> 색상 테마, 언어, <strong>러닝 오디오 안내 ON/OFF</strong>(<code>SharedPreferences</code>), 로컬 구독 entitlement 플래그(광고 제거 UI용, MVP에서 실제 IAP 미연동)<br>
+    <strong>목적:</strong> 사용자 설정 유지, 러닝 중 음성 안내(TTS는 <strong>기기 OS 엔진</strong> 사용, Run Pet 서버 미전송)<br>
+    <strong>보관:</strong> 기기 내 SharedPreferences 등</p>
+
+    <h3>2.8 수집하지 않는 항목 (MVP 1.0.0 기준)</h3>
+    <table>
+      <tr><th>Run Pet 계정(이메일·비밀번호)</th><td><strong>없음</strong></td></tr>
+      <tr><th>Run Pet 운영 서버 동기화</th><td><strong>없음</strong></td></tr>
+      <tr><th>Firebase Analytics / Remote Config (운영)</th><td><strong>비활성</strong> (<code>kRunPetFirebaseProjectConfigured = false</code>)</td></tr>
+      <tr><th>Firebase Crashlytics</th><td><strong>미사용</strong></td></tr>
+      <tr><th>광고(AdMob 등)</th><td><strong>SDK 미포함</strong></td></tr>
+      <tr><th>인앱 결제(StoreKit / Play Billing)</th><td><strong>SDK 미포함</strong> — 구독 UI는 로컬 entitlement만</td></tr>
+      <tr><th>친구 랭킹 서버 업로드</th><td><strong>없음</strong> (플레이스홀더만)</td></tr>
+      <tr><th>마케팅 푸시(FCM 등)</th><td><strong>없음</strong></td></tr>
+    </table>
+    <p>향후 기능 추가 시 본 방침을 업데이트합니다.</p>
+
+    <h2>3. 정보 이용 목적</h2>
+    <ul>
+      <li>러닝 세션 기록·저장·표시</li>
+      <li>펫 성장, 일일 퀘스트, 챌린지, 컬렉션 등 게임형 기능 제공</li>
+      <li>사용자 설정(언어, 테마, 오디오 안내 등) 유지</li>
+      <li>Android 실외 러닝 백그라운드 기록을 위한 포그라운드 서비스 알림 표시(해당 OS·권한 허용 시)</li>
+    </ul>
+    <p><strong>광고 타깃팅, 행동 기반 광고, Run Pet 서버 분석 목적의 개인 식별 수집은 MVP에서 하지 않습니다.</strong></p>
+
+    <h2>4. 제3자 제공 및 외부 서비스</h2>
+
+    <h3>4.1 지도 서비스 (Google Maps / Mapbox)</h3>
+    <p>앱은 경로·지도 표시를 위해 <strong>지도 제공 API</strong>를 사용할 수 있습니다.</p>
+    <ul>
+      <li><strong>Google Maps Platform</strong> (기본 구성): 지도 타일, 정적/동적 지도, 경로 관련 API 호출 시 <strong>위치·경로 관련 데이터가 Google에 전달될 수 있습니다.</strong></li>
+      <li><strong>Mapbox</strong> (운영자가 토큰을 설정한 경우): 동일하게 지도 API 제공자에게 요청 데이터가 전달될 수 있습니다.</li>
+    </ul>
+    <p>Run Pet은 MVP 기준 <strong>지도 API 호출을 위해 필요한 범위</strong>에서만 해당 제공자와 데이터를 주고받습니다. Google/Mapbox 각사의 개인정보 처리방침이 별도로 적용됩니다.</p>
+    <ul>
+      <li>Google Maps Platform: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+      <li>Mapbox: <a href="https://www.mapbox.com/legal/privacy">https://www.mapbox.com/legal/privacy</a></li>
+    </ul>
+
+    <h3>4.2 앱 스토어 플랫폼</h3>
+    <p>앱 배포·(향후)결제·OS 백업·플랫폼 기본 크래시 리포트 등은 <strong>Apple App Store / Google Play</strong> 정책 및 해당 플랫폼이 수집하는 정보에 따릅니다.</p>
+
+    <h3>4.3 Run Pet 서버</h3>
+    <p>MVP <strong>1.0.0</strong>에는 Run Pet이 운영하는 <strong>중앙 서버로 사용자 데이터를 동기화하지 않습니다.</strong></p>
+
+    <h2>5. 권한 안내</h2>
+    <table>
+      <tr><th>위치 (사용 중)</th><td>실외 러닝 거리·경로·페이스</td></tr>
+      <tr><th>위치 (백그라운드 / 항상)</th><td>활성 실외 러닝 중 기록 지속</td></tr>
+      <tr><th>동작·활동 인식</th><td>실내 러닝, 만보기</td></tr>
+      <tr><th>사진/미디어</th><td>사용자가 선택한 사진을 기록에 첨부</td></tr>
+      <tr><th>알림 (Android)</th><td>실외 러닝 백그라운드 기록 시 포그라운드 서비스 알림 등</td></tr>
+    </table>
+    <p>권한은 <strong>기능 사용 시</strong> 요청되며, 거부 시 해당 기능만 제한될 수 있습니다.</p>
+    <p><strong>마이크:</strong> Run Pet MVP는 러닝 오디오 안내에 <strong>OS TTS(텍스트 음성 변환)</strong>를 사용하며, <strong>마이크 녹음 권한을 요청하지 않습니다.</strong></p>
+
+    <h2>6. 데이터 저장 위치</h2>
+    <table>
+      <tr><th>기기 내 SQLite (Drift)</th><td>러닝 기록, 펫/챌린지/컬렉션 등</td></tr>
+      <tr><th>SharedPreferences</th><td>설정, 오디오 안내 ON/OFF, 테마 등</td></tr>
+      <tr><th>앱 문서 디렉터리</th><td>사용자 첨부 사진, 지도 스냅샷 캐시 등</td></tr>
+      <tr><th>Run Pet 운영 서버</th><td><strong>저장하지 않음</strong> (MVP)</td></tr>
+    </table>
+
+    <h2>7. 보관 기간 및 삭제</h2>
+    <ul>
+      <li>데이터는 <strong>사용자 기기 내</strong>에 보관됩니다.</li>
+      <li>앱 <strong>삭제(제거)</strong> 시, 일반적으로 해당 앱 샌드박스의 로컬 데이터·캐시·첨부 사진이 함께 삭제됩니다.</li>
+      <li>OS 또는 기기 제조사 백업(iCloud, Google 백업 등)에 포함될 수 있으며, 이는 <strong>플랫폼 백업 정책</strong>에 따릅니다.</li>
+      <li>개발·QA용 GPS trace 파일은 <strong>디버그 빌드</strong>에서만 생성·열람 UI가 노출되며, <strong>릴리스 빌드 UI에서는 GPS trace 디버그 도구를 제공하지 않습니다.</strong></li>
+    </ul>
+
+    <h2>8. 이용자의 권리</h2>
+    <p>Run Pet MVP는 <strong>계정 시스템이 없으므로</strong>, 원칙적으로 다음 방법으로 데이터를 관리할 수 있습니다.</p>
+    <ul>
+      <li>앱 내 데이터 변경·삭제(기능 제공 범위 내)</li>
+      <li>앱 삭제를 통한 로컬 데이터 제거</li>
+      <li>OS 설정에서 위치·사진·알림 권한 철회</li>
+    </ul>
+    <p>문의: [확인 필요 — 문의 이메일]</p>
+
+    <h2>9. 아동의 개인정보</h2>
+    <p>앱이 <strong>만 14세 미만(또는 해당 국가 법정 연령 미만) 아동을 대상으로 고의적으로 개인정보를 수집하지 않도록</strong> 설계·운영하는 것을 원칙으로 합니다.<br>
+    <strong>연령 기준 및 아동 관련 문구는 [확인 필요 — PO/법률 검토].</strong></p>
+
+    <h2>10. 보안</h2>
+    <p>Run Pet은 기기 내 저장 데이터에 대해 OS가 제공하는 앱 샌드박스·암호화 기능에 의존합니다. MVP는 <strong>별도 End-to-End 암호화 서버 동기화를 제공하지 않습니다.</strong></p>
+
+    <h2>11. 국외 이전</h2>
+    <p>MVP 기준 Run Pet <strong>자체 서버 이전은 없습니다.</strong> 지도 API(Google/Mapbox) 이용 시 해당 제공자의 서버(해외 포함)로 요청이 전달될 수 있습니다.</p>
+
+    <h2>12. 정책 변경</h2>
+    <p>본 방침은 법령·서비스 변경에 따라 수정될 수 있습니다. 중요한 변경 시 앱 또는 <strong>공개 URL</strong>을 통해 안내합니다. 최종 수정일은 문서 상단에 표시합니다.</p>
+
+    <h2>13. 문의</h2>
+    <table>
+      <tr><th>이메일</th><td>[확인 필요]</td></tr>
+      <tr><th>운영자</th><td>[확인 필요]</td></tr>
+    </table>
+
+    <footer>
+      RunPet 개인정보처리방침 · 버전 1.1 · 최종 수정일 2026-06-08
+    </footer>
+  </main>
+</body>
+</html>
