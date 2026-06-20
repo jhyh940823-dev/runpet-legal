@@ -18,7 +18,7 @@
   <main>
     <article>
       <h1>プライバシーポリシー</h1>
-      <p class="meta">最終更新: 2026-06-16</p>
+      <p class="meta">最終更新: 2026-06-20</p>
       <nav class="page-nav" aria-label="Page">
         <a href="index.html">プライバシーポリシー</a> <a href="../terms/index.html">利用規約</a> <a href="../support/index.html">サポート</a> <a href="../account-deletion/index.html">アカウント削除</a> <a href="../subscription/index.html">サブスクリプション</a>
       </nav>
@@ -26,7 +26,9 @@
 <p>Run Pet（ランぺット）は屋外・屋内ラン記録とペット育成ゲームを提供するモバイルアプリです。現行リリースビルドでは<strong>Run Pet 運営サーバーへユーザーデータを同期しません。</strong>主なデータは端末内に保存されます。</p><h2>収集・保存する情報</h2>
 <ul><li><strong>GPS / ルート座標</strong> — 屋外ラン。端末内 Drift DB。Run Pet サーバー送信なし。</li><li><strong>走行距離・時間・ペース</strong> — 端末内のみ。</li><li><strong>歩数計 / 歩数</strong> — 屋内ランと記録タブ。Drift / SharedPreferences。</li><li><strong>ペット・卵・チャレンジ状態</strong> — 端末内 Drift と設定。</li><li><strong>ラン記録写真</strong> — ユーザー選択（Plus）。アプリドキュメントフォルダ。</li><li><strong>ゲストプロフィール設定</strong> — SharedPreferences。</li><li><strong>サブスク資格フラグ</strong> — ローカル SharedPreferences（IAP 未連携）。</li></ul>
 <h2>送信しない項目（現行リリース）</h2>
-<ul><li><strong>フレンド関係</strong> — 機能シェルのみ。バックエンドオフ。</li><li><strong>広告 / IDFA</strong> — AdMob 未連携。ATT 未使用。</li><li><strong>分析（Firebase）</strong> — 有効化されていません。</li><li><strong>決済データ</strong> — StoreKit / Play Billing 未連携。</li></ul>
+<ul><li><strong>フレンド関係</strong> — 機能シェルのみ。バックエンドオフ。</li><li><strong>広告 / IDFA</strong> — 現行リリースビルドでは広告配信は有効化されていません。アプリバイナリに広告 SDK が含まれる場合がありますが、V1 リリース設定では広告リクエスト・パーソナライズ広告は使用しません。ATT 未使用。</li><li><strong>Firebase Analytics</strong> — 有効化されていません。</li><li><strong>Firebase Remote Config</strong> — プロジェクト未構成時は初期化しません。</li><li><strong>決済データ</strong> — StoreKit / Play Billing 未連携。</li></ul>
+<h2>音声案内</h2>
+<p>ラン中の距離・時間などの案内に、端末内の音声合成（TTS/ネイティブエンジン）を使用する場合があります。マイク録音は行わず、音声データを Run Pet サーバーへ送信しません。</p>
 <h2>地図と第三者</h2>
 <p>ルート座標は端末に保存されます。運営者が Google Maps API キーを設定した場合、地図タイル表示で Google サービスへのネットワーク要求が発生する場合があります。</p>
 <h2>権限</h2>
@@ -38,7 +40,7 @@
     </article>
   </main>
   <footer class="site-footer">
-    <p>Run Pet · 最終更新: 2026-06-16</p>
+    <p>Run Pet · 最終更新: 2026-06-20</p>
   </footer>
 </body>
 </html>
