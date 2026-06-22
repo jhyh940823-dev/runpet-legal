@@ -18,29 +18,30 @@
   <main>
     <article>
       <h1>Privacy Policy</h1>
-      <p class="meta">Last updated: 2026-06-20</p>
+      <p class="meta">Last updated: 2026-06-21</p>
       <nav class="page-nav" aria-label="Page">
         <a href="index.html">Privacy Policy</a> <a href="../terms/index.html">Terms of Use</a> <a href="../support/index.html">Support</a> <a href="../account-deletion/index.html">Account Deletion</a> <a href="../subscription/index.html">Subscription</a>
       </nav>
       <h2>Overview</h2>
-<p>Run Pet is a mobile app combining outdoor/indoor run logging with pet growth gameplay. In current release builds, <strong>user data is not synced to a Run Pet operator server.</strong> Primary data stays on your device.</p><h2>Data collected and stored</h2>
-<ul><li><strong>GPS / route points</strong> — outdoor runs; stored in on-device Drift DB; no Run Pet server upload.</li><li><strong>Run distance, time, pace</strong> — on-device only.</li><li><strong>Pedometer / steps</strong> — indoor runs and Records tab; Drift / SharedPreferences.</li><li><strong>Pet, egg, challenge state</strong> — on-device Drift and preferences.</li><li><strong>Run record photos</strong> — user-selected (Plus); app documents folder.</li><li><strong>Guest profile preferences</strong> — SharedPreferences.</li><li><strong>Subscription entitlement flag</strong> — local SharedPreferences (IAP not connected).</li></ul>
+<p>Run Pet is a mobile app combining outdoor/indoor run logging with pet growth gameplay. <strong>Users must be 14 years of age or older.</strong> The launch target requires <strong>Apple or Google sign-in</strong>; guest play is not offered. Release builds may keep auth disabled until operator activation. <strong>User data is not synced to a Run Pet operator server</strong> in the current release. Primary data stays on your device.</p>
+<h2>Data collected and stored</h2>
+<ul><li><strong>Account identifier (OAuth provider uid)</strong> — when signed in; scopes on-device data; no Run Pet server upload in current release.</li><li><strong>Email / name</strong> — OAuth providers may return these; Run Pet may not store them separately in app DB. <strong>Operator confirm</strong> for store disclosures.</li><li><strong>GPS / route points</strong> — outdoor runs; on-device Drift DB; no Run Pet server upload.</li><li><strong>Run distance, time, pace</strong> — on-device only.</li><li><strong>Pedometer / steps</strong> — indoor runs and Records tab.</li><li><strong>Pet, egg, challenge state</strong> — on-device Drift and preferences.</li><li><strong>Run record photos</strong> — user-selected (Plus).</li><li><strong>Required consent and login-entry state</strong> — SharedPreferences (14+, terms, privacy, location-based service terms).</li><li><strong>Subscription entitlement flag</strong> — local SharedPreferences (IAP not connected).</li></ul>
 <h2>Not transmitted (current release)</h2>
-<ul><li><strong>Friend relations</strong> — feature shell only; backend off.</li><li><strong>Ads / IDFA</strong> — Ad serving is disabled in current release builds. An ad SDK may be present in the app binary, but V1 release settings do not request ads or personalized advertising. No ATT.</li><li><strong>Firebase Analytics</strong> — not active.</li><li><strong>Firebase Remote Config</strong> — not initialized when project files are not configured.</li><li><strong>Payment data</strong> — StoreKit / Play Billing not connected.</li></ul>
+<ul><li><strong>Friend relations</strong> — feature shell only; backend off.</li><li><strong>Ads / IDFA</strong> — Ad serving disabled in current release builds. SDK may be in binary; no personalized ads. No ATT.</li><li><strong>Firebase Analytics</strong> — not active.</li><li><strong>Firebase Remote Config</strong> — not initialized when project not configured.</li><li><strong>Payment data</strong> — StoreKit / Play Billing not connected.</li></ul>
 <h2>Voice guidance</h2>
-<p>Run announcements may use on-device speech synthesis (TTS/native engine). The app does not record microphone audio or upload voice data to Run Pet servers.</p>
+<p>On-device TTS/native engine; no microphone recording; no server upload.</p>
 <h2>Maps and third parties</h2>
-<p>Route points are stored locally. When an operator configures a Google Maps API key, map tiles may trigger network requests to Google services.</p>
+<p>Route points stored locally. Map tiles may request Google when API key is configured.</p>
 <h2>Permissions</h2>
-<ul><li>Location (when-in-use / background) — outdoor run GPS</li><li>Motion / activity recognition — indoor pedometer</li><li>Photo library — attach photos to records</li><li>Notifications — Android outdoor foreground service when applicable</li></ul>
+<ul><li>Location — outdoor run GPS. <strong>OS location permission is requested when starting an outdoor run.</strong> Location-based service terms are accepted in first-login required consent.</li><li>Motion / activity — indoor pedometer</li><li>Photo library — record photos</li><li>Notifications — Android outdoor foreground service when applicable</li></ul>
 <h2>Data deletion</h2>
-<p>Remove on-device data by deleting the app or individual records in-app. Server account deletion is <strong>NOT APPLICABLE</strong> today.</p>
+<p><strong>Settings → Account → Delete account</strong> removes on-device data for the signed-in account. Sign out keeps local run/pet data. Uninstall removes all local data. <strong>Remote server account deletion</strong> is <strong>PENDING</strong> until release auth ships.</p>
 <h2>Contact</h2>
 <p>Customer support email: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></p>
     </article>
   </main>
   <footer class="site-footer">
-    <p>Run Pet · Last updated: 2026-06-20</p>
+    <p>Run Pet · Last updated: 2026-06-21</p>
   </footer>
 </body>
 </html>
