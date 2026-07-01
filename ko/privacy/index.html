@@ -18,24 +18,23 @@
   <main>
     <article>
       <h1>개인정보 처리방침</h1>
-      <p class="meta">최종 업데이트: 2026-06-21</p>
+      <p class="meta">최종 업데이트: 2026-06-20</p>
       <nav class="page-nav" aria-label="Page">
         <a href="index.html">개인정보 처리방침</a> <a href="../terms/index.html">이용약관</a> <a href="../support/index.html">고객 지원</a> <a href="../account-deletion/index.html">계정 삭제</a> <a href="../subscription/index.html">구독 안내</a>
       </nav>
       <h2>개요</h2>
-<p>Run Pet(런 펫)은 실외·실내 러닝 기록과 펫 성장 게임을 제공하는 모바일 앱입니다. <strong>만 14세 이상</strong>만 이용할 수 있습니다. <strong>Apple 또는 Google 로그인</strong>으로 이용합니다. <strong>Run Pet 운영 서버로 사용자 데이터를 동기화하지 않습니다.</strong> 주요 데이터는 사용자 기기에 저장됩니다.</p>
-<h2>수집·저장하는 정보</h2>
-<ul><li><strong>계정 식별자</strong> — 로그인 시 기기 내 인증 세션 및 앱 데이터 구분에 사용. Run Pet 서버 전송 없음.</li><li><strong>이메일·이름</strong> — 로그인 제공자가 반환할 수 있으나 앱에 별도 저장하지 않을 수 있습니다.</li><li><strong>GPS / 경로 좌표</strong> — 실외 러닝 시. 기기 내 앱 저장소에 저장. Run Pet 서버 전송 없음.</li><li><strong>러닝 거리·시간·페이스</strong> — 기기 내 저장. 서버 전송 없음.</li><li><strong>만보기 / 걸음 수</strong> — 실내 러닝 및 기록 탭. 기기 내 앱 저장소.</li><li><strong>펫·알·챌린지 상태</strong> — 기기 내 앱 저장소 및 설정.</li><li><strong>러닝 기록 사진</strong> — 사용자가 직접 선택(Plus). 앱 문서 폴더에 저장.</li><li><strong>필수 동의·로그인 진입 상태</strong> — SharedPreferences(만 14세 이상 확인, 약관·개인정보·위치기반서비스 동의 버전).</li><li><strong>구독 자격 플래그</strong> — 로컬 SharedPreferences(IAP 미연동).</li></ul>
+<p>Run Pet(런 펫)은 실외·실내 러닝 기록과 펫 성장 게임을 제공하는 모바일 앱입니다. 현재 출시 빌드 기준 <strong>Run Pet 운영 서버로 사용자 데이터를 동기화하지 않습니다.</strong> 주요 데이터는 사용자 기기에 저장됩니다.</p><h2>수집·저장하는 정보</h2>
+<ul><li><strong>GPS / 경로 좌표</strong> — 실외 러닝 시. 기기 내 Drift DB 저장. Run Pet 서버 전송 없음.</li><li><strong>러닝 거리·시간·페이스</strong> — 기기 내 저장. 서버 전송 없음.</li><li><strong>만보기 / 걸음 수</strong> — 실내 러닝 및 기록 탭. Drift / SharedPreferences.</li><li><strong>펫·알·챌린지 상태</strong> — 기기 내 Drift 및 설정.</li><li><strong>러닝 기록 사진</strong> — 사용자가 직접 선택(Plus). 앱 문서 폴더에 저장.</li><li><strong>게스트 프로필 설정</strong> — SharedPreferences.</li><li><strong>구독 자격 플래그</strong> — 로컬 SharedPreferences(IAP 미연동).</li></ul>
 <h2>전송하지 않는 항목 (현재 출시)</h2>
 <ul><li><strong>친구 관계</strong> — 기능 셸만 존재, 서버 미연동.</li><li><strong>광고 / IDFA</strong> — 현재 출시 빌드에서는 광고 게재가 활성화되지 않습니다. 앱 바이너리에 광고 SDK가 포함될 수 있으나, V1 출시 설정상 광고 요청·개인 맞춤 광고는 사용하지 않습니다. ATT 미사용.</li><li><strong>분석(Firebase Analytics)</strong> — 활성화되지 않음.</li><li><strong>Firebase Remote Config</strong> — 프로젝트 미구성 시 초기화하지 않음.</li><li><strong>결제 데이터</strong> — StoreKit / Play Billing 미연동.</li></ul>
 <h2>음성 안내</h2>
 <p>러닝 중 거리·시간 등 안내를 위해 기기 내 음성 합성(TTS/네이티브 엔진)을 사용할 수 있습니다. 마이크 녹음은 하지 않으며, 음성 데이터를 Run Pet 서버로 전송하지 않습니다.</p>
 <h2>지도 및 제3자</h2>
-<p>경로 좌표는 기기에 저장됩니다. 지도 타일 표시 시 Google Maps 등 지도 서비스에 네트워크 요청이 발생할 수 있습니다.</p>
+<p>경로 좌표는 기기에 저장됩니다. 지도 타일 표시 시 운영자가 Google Maps API 키를 설정한 경우 Google 서비스에 네트워크 요청이 발생할 수 있습니다.</p>
 <h2>권한</h2>
-<ul><li>위치(사용 중 / 백그라운드) — 실외 러닝 GPS. <strong>OS 위치 권한은 실외 러닝 시작 시</strong> 요청합니다. 위치기반서비스 이용약관은 최초 필수 동의에 포함됩니다.</li><li>모션 / 활동 인식 — 실내 만보기</li><li>사진 라이브러리 — 기록 사진 첨부</li><li>알림 — Android 실외 포그라운드 서비스(해당 시)</li></ul>
+<ul><li>위치(사용 중 / 백그라운드) — 실외 러닝 GPS</li><li>모션 / 활동 인식 — 실내 만보기</li><li>사진 라이브러리 — 기록 사진 첨부</li><li>알림 — Android 실외 포그라운드 서비스(해당 시)</li></ul>
 <h2>데이터 삭제</h2>
-<p>설정 → 계정 → <strong>계정 삭제</strong>로 로그인 계정 기준 기기 내 데이터를 삭제할 수 있습니다. 로그아웃은 세션만 정리하며 로컬 러닝·펫 데이터는 유지됩니다. 앱 삭제로 전체 기기 데이터를 제거할 수 있습니다. <strong>서버 계정 삭제</strong>는 현재 앱에서 별도 제공하지 않으며, 도입 시 본 페이지를 통해 안내합니다.</p>
+<p>앱 삭제 또는 앱 내 기록 삭제로 기기 데이터를 제거할 수 있습니다. 서버 계정 삭제는 현재 해당 없음(<strong>NOT APPLICABLE</strong>).</p>
 <h2>문의</h2>
 <p>고객지원 이메일: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></p>
     </article>
