@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy — Run Pet</title>
+  <title>Changes to this policy — Run Pet</title>
   <link rel="stylesheet" href="../../assets/styles.css">
 </head>
 <body>
@@ -17,30 +17,37 @@
   </header>
   <main>
     <article>
-      <h1>Privacy Policy</h1>
-      <p class="meta">Last updated: 2026-06-20</p>
+      <h1>Changes to this policy</h1>
+      <p class="meta">Last updated: 2026-07-04</p>
       <nav class="page-nav" aria-label="Page">
         <a href="index.html">Privacy Policy</a> <a href="../terms/index.html">Terms of Use</a> <a href="../location-terms/index.html">Location-based Service Terms</a> <a href="../support/index.html">Support</a> <a href="../account-deletion/index.html">Account Deletion</a> <a href="../subscription/index.html">Subscription</a>
       </nav>
-      <h2>Overview</h2>
-<p>Run Pet is a mobile app combining outdoor/indoor run logging with pet growth gameplay. In current release builds, <strong>user data is not synced to a Run Pet operator server.</strong> Primary data stays on your device.</p><h2>Data collected and stored</h2>
-<ul><li><strong>GPS / route points</strong> — outdoor runs; stored in on-device Drift DB; no Run Pet server upload.</li><li><strong>Run distance, time, pace</strong> — on-device only.</li><li><strong>Pedometer / steps</strong> — indoor runs and Records tab; Drift / SharedPreferences.</li><li><strong>Pet, egg, challenge state</strong> — on-device Drift and preferences.</li><li><strong>Run record photos</strong> — user-selected (Plus); app documents folder.</li><li><strong>Guest profile preferences</strong> — SharedPreferences.</li><li><strong>Subscription entitlement flag</strong> — local SharedPreferences (IAP not connected).</li></ul>
-<h2>Not transmitted (current release)</h2>
-<ul><li><strong>Friend relations</strong> — feature shell only; backend off.</li><li><strong>Ads / IDFA</strong> — Ad serving is disabled in current release builds. An ad SDK may be present in the app binary, but V1 release settings do not request ads or personalized advertising. No ATT.</li><li><strong>Firebase Analytics</strong> — not active.</li><li><strong>Firebase Remote Config</strong> — not initialized when project files are not configured.</li><li><strong>Payment data</strong> — StoreKit / Play Billing not connected.</li></ul>
-<h2>Voice guidance</h2>
-<p>Run announcements may use on-device speech synthesis (TTS/native engine). The app does not record microphone audio or upload voice data to Run Pet servers.</p>
-<h2>Maps and third parties</h2>
-<p>Route points are stored locally. When an operator configures a Google Maps API key, map tiles may trigger network requests to Google services.</p>
-<h2>Permissions</h2>
-<ul><li>Location (when-in-use / background) — outdoor run GPS</li><li>Motion / activity recognition — indoor pedometer</li><li>Photo library — attach photos to records</li><li>Notifications — Android outdoor foreground service when applicable</li></ul>
-<h2>Data deletion</h2>
-<p>Remove on-device data by deleting the app or individual records in-app. Server account deletion is <strong>NOT APPLICABLE</strong> today.</p>
-<h2>Contact</h2>
-<p>Customer support email: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></p>
+      <nav class="clause-toc" aria-label="Table of Contents"><p class="toc-label">Table of Contents</p><ol><li><a href="#clause-1">Article 1 (Purpose of processing)</a></li><li><a href="#clause-2">Article 2 (Personal information processed)</a></li><li><a href="#clause-3">Article 3 (Retention period)</a></li><li><a href="#clause-4">Article 4 (Provision to third parties)</a></li><li><a href="#clause-5">Article 5 (Outsourcing and SDK status)</a></li><li><a href="#clause-6">Article 6 (Destruction and user controls)</a></li><li><a href="#clause-7">Article 7 (App permissions)</a></li><li><a href="#clause-8">Article 8 (Minors)</a></li><li><a href="#clause-9">Article 9 (Privacy officer and contact)</a></li><li><a href="#clause-10">Article 10 (Changes to this policy)</a></li></ol></nav>
+<section class="clause" id="clause-1"><h2>Article 1 (Purpose of processing)</h2>
+<p>Run Pet is a mobile app for outdoor/indoor run logging and pet-motivation game features. The V1 release stores primary data on the user's device and does not synchronize it to a Run Pet server.</p></section>
+<section class="clause" id="clause-2"><h2>Article 2 (Personal information processed)</h2>
+<ul><li><strong>Precise GPS / route points</strong> — when a user starts an outdoor run, to record route, distance, pace and time. Active outdoor runs can continue location processing while backgrounded where OS permission/settings allow.</li><li><strong>Running metrics and pedometer data</strong> — for records, indoor-running features, daily goals and in-app game progress.</li><li><strong>User-selected photos</strong> — only when the user attaches a photo to a record.</li><li><strong>Pet, egg, challenge, inventory, badge and settings data</strong> — local game and preference features.</li><li><strong>Guest profile preferences and subscription entitlement flag</strong> — SharedPreferences (IAP not connected).</li></ul><p>Processed on the device and not sent outside the device are different: V1 does not send these records to a Run Pet server, but map tiles can cause a network request to a configured map provider.</p></section>
+<section class="clause" id="clause-3"><h2>Article 3 (Retention period)</h2>
+<p>Records and game data are stored in device-local Drift/SQLite (schema v21), settings in SharedPreferences, and selected photos in the app's local document storage.</p><p>Raw GPS route geometry is stored for no more than 365 days and is then redacted while non-location running summaries may remain. Before an outdoor run, users separately accept the current location-based-service terms.</p></section>
+<section class="clause" id="clause-4"><h2>Article 4 (Provision to third parties)</h2>
+<p>V1 has no Run Pet remote account or server sync. When an operator configures a Google Maps API key, map tile requests may be subject to Google's privacy policy.</p></section>
+<section class="clause" id="clause-5"><h2>Article 5 (Outsourcing and SDK status)</h2>
+<ul><li><strong>Friend relations</strong> — feature shell only; backend off.</li><li><strong>Ads / IDFA</strong> — Ad serving is disabled in current release builds. An ad SDK may be present in the app binary, but V1 release settings do not request ads or personalized advertising. No ATT.</li><li><strong>Firebase Analytics / Remote Config</strong> — not initialized when project files are not configured.</li><li><strong>Payment (StoreKit / Play Billing)</strong> — sales not connected.</li><li><strong>Voice guidance</strong> — on-device TTS/native engine; no microphone recording or voice upload.</li></ul></section>
+<section class="clause" id="clause-6"><h2>Article 6 (Destruction and user controls)</h2>
+<p>Users can stop/cancel a run, revoke OS location/photo/notification permissions, delete available records, withdraw location-terms consent to redact all saved route geometry, or remove the app. There is no V1 server account, so server-account deletion is <strong>NOT APPLICABLE</strong>.</p></section>
+<section class="clause" id="clause-7"><h2>Article 7 (App permissions)</h2>
+<ul><li>Location (when-in-use / background) — outdoor run GPS</li><li>Motion / activity recognition — indoor pedometer</li><li>Photo library — attach photos to records</li><li>Notifications — Android outdoor foreground service when applicable</li></ul></section>
+<section class="clause" id="clause-8"><h2>Article 8 (Minors)</h2>
+<p>Run Pet is for users aged 14 and over. The app stores only a local self-confirmation timestamp and does not collect date of birth or guardian information. Overseas availability does not remove mandatory protections that apply where a user lives.</p></section>
+<section class="clause" id="clause-9"><h2>Article 9 (Privacy officer and contact)</h2>
+<p>Customer support email: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></p></section>
+<section class="clause" id="clause-10"><h2>Article 10 (Changes to this policy)</h2>
+<p>Material changes to processing, server sync, ads, analytics, purchases, accounts, HealthKit/Health Connect, route sharing, or child policy require a new review and notice before activation.</p></section>
+<section class="clause-supplement"><h2>Supplementary Provisions</h2><p>Last updated: 2026-07-04</p></section>
     </article>
   </main>
   <footer class="site-footer">
-    <p>Run Pet · Last updated: 2026-06-20</p>
+    <p>Run Pet · Last updated: 2026-07-04</p>
   </footer>
 </body>
 </html>
