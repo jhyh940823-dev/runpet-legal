@@ -199,15 +199,24 @@ footer.site-footer {
   font-size: 0.8125rem;
 }
 
-.operator-footer {
+.operator-footer,
+.operator-disclosure {
   margin-top: 0.75rem;
   padding-top: 0.75rem;
   border-top: 1px solid var(--border);
-  font-size: 0.8125rem;
-  line-height: 1.6;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #6b7280;
 }
 
-.operator-footer p {
+.site-footer .operator-info {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.operator-footer p,
+.operator-disclosure p {
   margin: 0;
 }
 
