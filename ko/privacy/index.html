@@ -22,61 +22,29 @@
       <nav class="page-nav" aria-label="Page">
         <a href="index.html">개인정보 처리방침</a> <a href="../terms/index.html">이용약관</a> <a href="../location-terms/index.html">위치기반서비스 이용약관</a> <a href="../support/index.html">고객 지원</a> <a href="../account-deletion/index.html">계정 삭제</a> <a href="../subscription/index.html">구독 안내</a>
       </nav>
-      <h2>개요</h2>
-      <p>Run Pet(런 펫)은 실외·실내 러닝 기록과 펫 성장 게임 기능을 제공하는 모바일 앱입니다. <strong>현재 출시 빌드(prod)</strong>는 <strong>Firebase Auth 로그인이 필수</strong>이며, 게스트 출시 로그인은 지원하지 않습니다. Apple 또는 Google 로그인을 사용합니다.</p>
-      <h2>처리하는 개인정보 항목 및 목적</h2>
-      <ul>
-        <li><strong>Firebase Auth 식별자(UID), Apple/Google 로그인 제공자 정보</strong> — 계정 생성·인증, 기기-계정 연결(owner binding)</li>
-        <li><strong>이메일 또는 제공자가 전달한 연락 정보</strong> — 계정 식별·복구(제공 시), 친구 기능 내부 식별(공개 UI에 노출하지 않음)</li>
-        <li><strong>공개 표시 이름</strong> — 친구·참고용 활동 요약 등 공개 프로필 표시</li>
-        <li><strong>연령(만 14세 이상) 자가확인 결과 및 동의 버전·시각</strong> — 법정 연령 제한 및 필수 약관 동의 증빙</li>
-        <li><strong>위치 동의 상태, 정밀 GPS / routePoints</strong> — 실외 러닝 경로·거리·페이스 기록(동의 시)</li>
-        <li><strong>러닝 요약·지표, 만보기 데이터</strong> — 기록, 실내 러닝, 일일 목표, 게임 진행</li>
-        <li><strong>사용자 선택 사진</strong> — 기록에 사진을 첨부할 때만(기기 로컬)</li>
-        <li><strong>펫·알·챌린지·설정·배지 상태</strong> — 게임 및 환경설정</li>
-        <li><strong>친구 코드, 친구 관계, 친구 활동 요약</strong> — 친구 추가·참고용 활동 요약(Firebase/Firestore)</li>
-        <li><strong>Firebase 계정 백업(V1) 요약 상태</strong> — 기기 변경 시 계정 연결 데이터 복원(원시 GPS·원본 사진 제외)</li>
-        <li><strong>iOS CloudKit 개인 백업(해당 시)</strong> — iOS 사용자 선택 iCloud 백업/복원(별도 범위·동의 적용)</li>
-        <li><strong>크래시/진단 로그(해당 시)</strong> — 안정성 개선 — 출시 빌드에서는 민감정보 로그 차단 정책 적용</li>
-      </ul>
-      <h2>현재 출시에서 수집하지 않는 항목</h2>
-      <ul>
-        <li>광고 식별자(AdMob 출시 통합 비활성)</li>
-        <li>IAP 영수증 원문(구매·복원 비활성)</li>
-        <li>마케팅 푸시 수신 동의(기능 비활성)</li>
-        <li>법정대리인 정보, 생년월일</li>
-      </ul>
-      <h2>저장 위치 및 외부 처리</h2>
-      <ul>
-        <li><strong>기기 로컬:</strong> Drift/SQLite, SharedPreferences, 앱 문서 저장소(사진 등)</li>
-        <li><strong>Firebase / Google Cloud:</strong> Auth, Firestore(프로필·친구·백업 메타 등), Cloud Functions(계정 삭제 정리 등)</li>
-        <li><strong>Apple:</strong> Sign in with Apple, CloudKit(iOS 백업 해당 시)</li>
-        <li><strong>Google:</strong> Google Sign-In, Google Maps 타일(구성 시)</li>
-        <li><strong>광고(AdMob):</strong> 바이너리 포함 가능하나 <strong>현재 출시에서 광고 요청 비활성</strong></li>
-        <li><strong>IAP/구독:</strong> <strong>현재 출시에서 구매·복원 비활성</strong> — Apple/Google이 처리하는 거래 원문은 Run Pet 서버에 보관하지 않음</li>
-      </ul>
-      <h2>보유 기간 및 이용자 통제</h2>
-      <ul>
-        <li>원시 GPS 경로: 최대 365일(기기), 위치약관 철회 시 routePoints 삭제·러닝 요약 유지 정책</li>
-        <li>계정 탈퇴: Firebase Auth 계정 삭제, Firestore 프로필·친구 참조 정리, 로컬 Drift 데이터 삭제 경로 제공</li>
-        <li>로그아웃: 로컬 Drift 데이터는 삭제하지 않음</li>
-        <li>마케팅 푸시: <strong>현재 비활성</strong> — 향후 활성화 시 별도 명시적 동의 및 야간(21:00~08:00) 별도 동의 필요</li>
-      </ul>
-      <h2>미성년자</h2>
-      <p>Run Pet은 <strong>만 14세 이상 전용</strong>입니다. 법정대리인 동의 절차를 제공하지 않으며, 만 14세 미만은 가입을 완료할 수 없습니다. OAuth 후 필수 동의 전에 생성된 임시 Auth 계정은 동의 거절·미성년 분기 시 삭제됩니다.</p>
-      <h2>앱 접근 권한</h2>
-      <ul>
-        <li>위치(사용 중 / 백그라운드) — 실외 러닝 GPS</li>
-        <li>모션 / 활동 인식 — 실내 만보기</li>
-        <li>사진 라이브러리 — 기록 사진 첨부</li>
-        <li>알림 — Android 실외 포그라운드 서비스(해당 시)</li>
-      </ul>
-      <h2>음성 안내</h2>
-      <p>러닝 중 거리·시간 등 안내를 위해 기기 내 음성 합성(TTS/네이티브 엔진)을 사용할 수 있습니다. 마이크 녹음은 하지 않으며, 음성 데이터를 서버로 전송하지 않습니다.</p>
-      <h2>처리방침의 변경</h2>
-      <p>처리 방식, 서버 동기화 범위, 광고, 구매, 계정, HealthKit/Health Connect, 위치 처리, 아동 정책 등 중요 변경은 새 검토 및 고지 후 활성화합니다.</p>
-      <h2>문의</h2>
-      <p>개인정보처리자: 멍스토어 · 개인정보 보호책임자: 박정현<br>문의: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></p>
+      <nav class="clause-toc" aria-label="목차"><p class="toc-label">목차</p><ol><li><a href="#clause-1">제1조 (개인정보의 처리 목적)</a></li><li><a href="#clause-2">제2조 (처리하는 개인정보 항목)</a></li><li><a href="#clause-3">제3조 (개인정보의 처리 및 보유 기간)</a></li><li><a href="#clause-4">제4조 (개인정보의 제3자 제공)</a></li><li><a href="#clause-5">제5조 (개인정보 처리업무의 위탁 및 SDK 현황)</a></li><li><a href="#clause-6">제6조 (개인정보의 파기 및 이용자 통제)</a></li><li><a href="#clause-7">제7조 (앱 접근 권한)</a></li><li><a href="#clause-8">제8조 (미성년자)</a></li><li><a href="#clause-9">제9조 (개인정보 보호책임자 및 문의처)</a></li><li><a href="#clause-10">제10조 (처리방침의 변경)</a></li></ol></nav>
+<section class="clause" id="clause-1"><h2>제1조 (개인정보의 처리 목적)</h2>
+<p>Run Pet(런 펫)은 실외·실내 러닝 기록과 펫 성장 게임 기능을 제공하는 모바일 앱입니다. <strong>현재 출시 빌드(prod)</strong>는 <strong>Firebase Auth 로그인이 필수</strong>이며, 게스트 출시 로그인은 지원하지 않습니다. Apple 또는 Google 로그인을 사용합니다.</p></section>
+<section class="clause" id="clause-2"><h2>제2조 (처리하는 개인정보 항목)</h2>
+<ul><li><strong>Firebase Auth 식별자(UID), Apple/Google 로그인 제공자 정보</strong> — 계정 생성·인증, 기기-계정 연결(owner binding)</li><li><strong>이메일 또는 제공자가 전달한 연락 정보</strong> — 계정 식별·복구(제공 시), 친구 기능 내부 식별(공개 UI에 노출하지 않음)</li><li><strong>공개 표시 이름</strong> — 친구·참고용 활동 요약 등 공개 프로필 표시</li><li><strong>연령(만 14세 이상) 자가확인 결과 및 동의 버전·시각</strong> — 법정 연령 제한 및 필수 약관 동의 증빙</li><li><strong>위치 동의 상태, 정밀 GPS / routePoints</strong> — 실외 러닝 경로·거리·페이스 기록(동의 시)</li><li><strong>러닝 요약·지표, 만보기 데이터</strong> — 기록, 실내 러닝, 일일 목표, 게임 진행</li><li><strong>사용자 선택 사진</strong> — 기록에 사진을 첨부할 때만(기기 로컬)</li><li><strong>펫·알·챌린지·설정·배지 상태</strong> — 게임 및 환경설정</li><li><strong>친구 코드, 친구 관계, 친구 활동 요약</strong> — 친구 추가·참고용 활동 요약(Firebase/Firestore)</li><li><strong>Firebase 계정 백업(V1) 요약 상태</strong> — 기기 변경 시 계정 연결 데이터 복원(원시 GPS·원본 사진 제외)</li><li><strong>iOS CloudKit 개인 백업(해당 시)</strong> — iOS 사용자 선택 iCloud 백업/복원(별도 범위·동의 적용)</li></ul>
+<p><strong>현재 출시에서 수집하지 않음:</strong> 광고 식별자(AdMob 출시 통합 비활성), IAP 영수증 원문(구매·복원 비활성), 마케팅 푸시 수신 동의(기능 비활성), 법정대리인 정보, 생년월일.</p></section>
+<section class="clause" id="clause-3"><h2>제3조 (개인정보의 처리 및 보유 기간)</h2>
+<p>기록·게임 데이터는 기기 내 Drift/SQLite, 설정은 SharedPreferences, 선택 사진은 앱 로컬 문서 저장소에 보관됩니다. 계정 연결 요약 상태는 Firebase/Firestore에 저장될 수 있습니다.</p><p>원시 GPS 경로는 최대 365일(기기) 보관 후 삭제되며, 위치약관 철회 시 routePoints 삭제·러닝 요약 유지 정책이 적용됩니다. Firebase 계정 백업(V1)에는 원시 GPS routePoints·원본 러닝 사진·HealthKit 원시 데이터가 포함되지 않습니다.</p></section>
+<section class="clause" id="clause-4"><h2>제4조 (개인정보의 제3자 제공)</h2>
+<p>원시 GPS 경로를 제3자에게 판매·제공하지 않습니다. 지도 타일 표시 시 구성된 지도 제공자(Google Maps 등)에 네트워크 요청이 발생할 수 있으며, 해당 제공자의 정책이 적용될 수 있습니다.</p></section>
+<section class="clause" id="clause-5"><h2>제5조 (개인정보 처리업무의 위탁 및 SDK 현황)</h2>
+<ul><li><strong>Firebase / Google Cloud</strong> — Auth, Firestore(프로필·친구·백업 메타 등), Cloud Functions(계정 삭제 정리 등)</li><li><strong>Apple</strong> — Sign in with Apple, CloudKit(iOS 백업 해당 시)</li><li><strong>Google</strong> — Google Sign-In, Google Maps 타일(구성 시)</li><li><strong>친구 기능</strong> — Firebase/Firestore 기반 친구 관계 및 참고용 활동 요약</li><li><strong>광고(AdMob)</strong> — 바이너리 포함 가능하나 <strong>현재 출시에서 광고 요청 비활성</strong></li><li><strong>IAP/구독</strong> — <strong>현재 출시에서 구매·복원 비활성</strong></li><li><strong>음성 안내</strong> — 기기 내 TTS/네이티브 엔진 사용. 마이크 녹음·음성 데이터 서버 전송 없음</li></ul></section>
+<section class="clause" id="clause-6"><h2>제6조 (개인정보의 파기 및 이용자 통제)</h2>
+<p>계정 탈퇴 시 Firebase Auth 계정 삭제, Firestore 프로필·친구 참조 정리, 로컬 Drift 데이터 삭제 경로를 제공합니다. 로그아웃 시 로컬 Drift 데이터는 삭제하지 않습니다. 러닝 중지·취소, OS 권한 철회, 기록 삭제, 위치약관 동의 철회, 앱 삭제가 가능합니다. 마케팅 푸시는 <strong>현재 비활성</strong>입니다.</p></section>
+<section class="clause" id="clause-7"><h2>제7조 (앱 접근 권한)</h2>
+<ul><li>위치(사용 중 / 백그라운드) — 실외 러닝 GPS</li><li>모션 / 활동 인식 — 실내 만보기</li><li>사진 라이브러리 — 기록 사진 첨부</li><li>알림 — Android 실외 포그라운드 서비스(해당 시)</li></ul></section>
+<section class="clause" id="clause-8"><h2>제8조 (미성년자)</h2>
+<p>Run Pet은 <strong>만 14세 이상 전용</strong>입니다. 법정대리인 동의 절차를 제공하지 않으며, 만 14세 미만은 가입을 완료할 수 없습니다. OAuth 후 필수 동의 전에 생성된 임시 Auth 계정은 동의 거절·미성년 분기 시 삭제됩니다.</p></section>
+<section class="clause" id="clause-9"><h2>제9조 (개인정보 보호책임자 및 문의처)</h2>
+<ul><li>개인정보처리자: 멍스토어</li><li>개인정보 보호책임자: 박정현</li><li>문의: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></li></ul></section>
+<section class="clause" id="clause-10"><h2>제10조 (처리방침의 변경)</h2>
+<p>처리 방식, 서버 동기화 범위, 광고, 구매, 계정, HealthKit/Health Connect, 위치 처리, 아동 정책 등 중요 변경은 새 검토 및 고지 후 활성화합니다.</p></section>
+<section class="clause-supplement"><h2>부칙</h2><p>최종 업데이트: 2026-07-10</p></section>
     </article>
   </main>
   <footer class="site-footer">
